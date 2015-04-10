@@ -27,6 +27,9 @@ def CATEGORIES():
         addDirMain('Brazilian Indy','url',22,art + 'brazil.png')
 
 def YOUTUBE_LIST():
+		#Busted Open Nation
+        channel="BustedOpenNation"
+        addDir("Busted Open Nation",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-gPVwlRPjlSY/AAAAAAAAAAI/AAAAAAAAAAA/1JoUK2ZCMKY/s300-c-k-no/photo.jpg')
         #Pro Wrestling Cast
         channel="UCtS2zUbq91D2sWqkPH9UkZQ"
         addDir("Pro Wrestling Cast",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-n42rVdokppM/AAAAAAAAAAI/AAAAAAAAAAA/Y4YwR0AdVSc/s352-c-k-no/photo.jpg')
@@ -47,21 +50,33 @@ def YOUTUBE_LIST_USA():
 		#All Pro Wrestling
         channel="allprowrestling"
         addDir("All Pro Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-5spMsdiMyYw/AAAAAAAAAAI/AAAAAAAAAAA/Z-pyiYMzZi4/s300-c-k-no/photo.jpg')
+		#Allied Independent Wrestling Federations
+        channel="aiwfwrestling"
+        addDir("Allied Independent Wrestling Federations",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-CWhpFKyb3YQ/AAAAAAAAAAI/AAAAAAAAAAA/kE1IAW1bSDA/s300-c-k-no/photo.jpg')
 		#AML Wrestling
         channel="AMLWrestling"
         addDir("AML Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-heKizL3-cR0/AAAAAAAAAAI/AAAAAAAAAAA/ZmUMqTTJr_4/s352-c-k-no/photo.jpg')
 		#Combat Zone Wrestling
         channel="CZWNews"
         addDir("Combat Zone Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-JrecmbZv7zI/AAAAAAAAAAI/AAAAAAAAAAA/nTueYHRs8nI/s352-c-k-no/photo.jpg')
+		#Covey Pro Wrestling
+        channel="CoveyProTV"
+        addDir("Covey Pro Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-zlaT_RsiYdY/AAAAAAAAAAI/AAAAAAAAAAA/bKbLbAqqniw/s300-c-k-no/photo.jpg')
 		#CWF Mid-Atlantic Wrestling
         channel="CWFMidAtlantic"
         addDir("CWF Mid-Atlantic Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-8J6A5XijYy4/AAAAAAAAAAI/AAAAAAAAAAA/8C-kWNwbG_c/s352-c-k-no/photo.jpg')
+		#Enigma Pro Wrestling
+        channel="ENIGMAProWrestling"
+        addDir("Enigma Pro Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-1Ay9nMtX9xo/AAAAAAAAAAI/AAAAAAAAAAA/o9f6omQ-BQo/s300-c-k-no/photo.jpg')
 		#Future Stars of Wrestling
         channel="FutureStarsWrestling"
         addDir("Future Stars of Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,art + 'fsw.png')
 		#Global Championship Wrestling
         channel="GCWProWrestling"
         addDir("Global Championship Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-6k19G9dr3r8/AAAAAAAAAAI/AAAAAAAAAAA/mKG2_IyJvt8/s352-c-k-no/photo.jpg')
+		#IWA Mid-South Wrestling
+        channel="IWAMidsouthWrestling"
+        addDir("IWA Mid-South Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-kdZ2wu9J370/AAAAAAAAAAI/AAAAAAAAAAA/W357OeuZDYg/s300-c-k-no/photo.jpg')
 		#Kansas City Metro Pro
         channel="KCMetroPro"
         addDir("Kansas City Metro Pro",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,art +'kcmp.png')
@@ -80,6 +95,9 @@ def YOUTUBE_LIST_USA():
 		#Pennsylvania Premiere Wrestling
         channel="UC9Vcdw2lNEWR_AmVsELmsOg"
         addDir("Pennsylvania Premiere Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-pzNgORZsruQ/AAAAAAAAAAI/AAAAAAAAAAA/eujMhhrQ7cg/s352-c-k-no/photo.jpg')
+		#Pro Wrestling Arizona
+        channel="RPWNWA"
+        addDir("Pro Wrestling Arizona",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-Aog3gQeRPsM/AAAAAAAAAAI/AAAAAAAAAAA/Nkb_v16Eh5k/s300-c-k-no/photo.jpg')
 		#Pro Wrestling Battleground
         channel="BattlegroundOfficial"
         addDir("Pro Wrestling Battleground",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-8jJopZ1aO2Y/AAAAAAAAAAI/AAAAAAAAAAA/N5fOuiJrXx4/s352-c-k-no/photo.jpg')
@@ -95,6 +113,9 @@ def YOUTUBE_LIST_USA():
 		#Ultra Championship Wrestling-Zero
         channel="NWAUCWZERO"
         addDir("Ultra Championship Wrestling-Zero",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-rFbPY6UXsbQ/AAAAAAAAAAI/AAAAAAAAAAA/U4t7VLax6Bs/s300-c-k-no/photo.jpg')
+		#Vanguard Championship Wrestling
+        channel="jstep009"
+        addDir("Vanguard Championship Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-cT8O0X49FgE/AAAAAAAAAAI/AAAAAAAAAAA/cUllNw5WzXk/s300-c-k-no/photo.jpg')
 		#West Coast Wrestling Connection
         channel="WCWCPresents"
         addDir("West Coast Wrestling Connection",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-zpDKDSbCyQw/AAAAAAAAAAI/AAAAAAAAAAA/5yOz1k-2nP4/s300-c-k-no/photo.jpg')
@@ -103,6 +124,9 @@ def YOUTUBE_LIST_USA():
         addDir("West Virginia Championship Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-Prke6jG5Sz0/AAAAAAAAAAI/AAAAAAAAAAA/X8990e58pB8/s352-c-k-no/photo.jpg')
 		
 def YOUTUBE_LIST_EURO():
+		#German Wrestling Federation
+        channel="WrestlingGWF"
+        addDir("German Wrestling Federation",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-ERydrBnitYQ/AAAAAAAAAAI/AAAAAAAAAAA/l5G_iBlAV2I/s300-c-k-no/photo.jpg')
 		#NEW European Championship Wrestling
         channel="NEW1Wrestling"
         addDir("NEW European Championship Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-3oel4-UHSoQ/AAAAAAAAAAI/AAAAAAAAAAA/L0cGTumwMtE/s352-c-k-no/photo.jpg')
@@ -114,6 +138,9 @@ def YOUTUBE_LIST_EURO():
         addDir("Westside Xtreme Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-xSUbMnM2cDY/AAAAAAAAAAI/AAAAAAAAAAA/ovw0emo58fg/s352-c-k-no/photo.jpg')
 		
 def YOUTUBE_LIST_UK():
+		#EPW Wrestling
+        channel="EPWWRESTLETV"
+        addDir("EPW Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-L3qkJpnGOWc/AAAAAAAAAAI/AAAAAAAAAAA/66DMw73K88M/s300-c-k-no/photo.jpg')
 		#Insane Championship Wrestling
         channel="ICWOnline"
         addDir("Insane Championship Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-KjeljPNP9YE/AAAAAAAAAAI/AAAAAAAAAAA/8RPpUd5lIvE/s300-c-k-no/photo.jpg')
@@ -125,6 +152,12 @@ def YOUTUBE_LIST_UK():
         addDir("Revolution Pro Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,art + 'revprouk.png')
 		
 def YOUTUBE_LIST_CANADA():
+		#Canadian Wrestling's Elite
+        channel="cwelite1"
+        addDir("Canadian Wrestling's Elite",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-NjP-SwI1m7Q/AAAAAAAAAAI/AAAAAAAAAAA/196yZZhRqxw/s300-c-k-no/photo.jpg')
+		#Legend City Wrestling
+        channel="lcwnl"
+        addDir("Legend City Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-68Spmeaxnr4/AAAAAAAAAAI/AAAAAAAAAAA/i5KjhTRjEUk/s300-c-k-no/photo.jpg')
 		#Smash Wrestling
         channel="SmashWrestling1"
         addDir("Smash Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-bzmLZk_wO54/AAAAAAAAAAI/AAAAAAAAAAA/dY9FmQ8SBz0/s300-c-k-no/photo.jpg')
@@ -133,6 +166,12 @@ def YOUTUBE_LIST_CANADA():
         addDir("Victory Commonwealth Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-WQdqnx_rn0Y/AAAAAAAAAAI/AAAAAAAAAAA/peHwinYc4aU/s352-c-k-no/photo.jpg')
 		
 def YOUTUBE_LIST_AUS():
+		#Pacific Pro Wrestling
+        channel="PacificProWrestling"
+        addDir("Pacific Pro Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-aSDZo8PsdCw/AAAAAAAAAAI/AAAAAAAAAAA/w6uWd1FErK4/s300-c-k-no/photo.jpg')
+		#Riot City Wrestling
+        channel="RiotCityWrestling"
+        addDir("Riot City Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,'https://yt3.ggpht.com/-UBbKPonG-V8/AAAAAAAAAAI/AAAAAAAAAAA/kTZuelxvuuo/s300-c-k-no/photo.jpg')
 		#Snakepit Adelaide Pro Wrestling
         channel="PowerslamTV"
         addDir("Snakepit Adelaide Pro Wrestling",'http://gdata.youtube.com/feeds/api/users/'+channel+'/uploads?start-index=1&max-results=50',13,art + 'snakepit.png')
