@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.video.iwn"
        name="Indy Wrestling Network"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="RayW1986">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
