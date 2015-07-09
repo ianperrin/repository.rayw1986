@@ -3,4 +3,4 @@
 import xbmc		
 
 if __name__ == '__main__':		
-	xbmc.executebuiltin('ActivateWindow(10025,"plugin://plugin.video.genesis/?action=settings_playback")')
+	xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=playbackSettings)')

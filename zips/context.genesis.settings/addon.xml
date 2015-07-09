@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="context.genesis.settings" name="Genesis Settings" version="1.0.0" provider-name="RayW1986">
+<addon id="context.genesis.settings" name="Genesis Settings" version="1.0.1" provider-name="RayW1986">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
   </requires>
