@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="context.genesis.settings" name="Genesis Settings" version="1.0.0" provider-name="RayW1986">
+  <requires>
+    <import addon="xbmc.python" version="2.20.0"/>
+  </requires>
+    <extension point="kodi.context.item" library="addon.py">
+      <item>
+        <label>32000</label>
+        <visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,tvshow) | StringCompare(ListItem.dbtype,season) | StringCompare(ListItem.dbtype,episode)</visible>
+      </item>
+    </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Access Genesis Settings</summary>
+    <description lang="en">This context menu plugin will allow you to access the 'Playback' settings of Genesis while you are in your Kodi library.</description>
+    <platform>all</platform>
+    <forum></forum>
+    <source></source>
+  </extension>
+</addon>
+
 <addon id="plugin.video.iwn"
        name="Indy Wrestling Network"
        version="1.0.3"
@@ -15,26 +34,6 @@
         <platform>all</platform>
         <summary>Collection of Independent Wrestling Promotions</summary>
         <description>The Indy Wrestling Network is your number one stop shop for independent wrestling promotions across the world.
-		[B]NOTE:[/B] This plugin requires that you have the YouTube plugin installed also.</description>
-    </extension>
-
-</addon>
-
-<addon id="plugin.video.thefa"
-       name="The FA"
-       version="0.0.1"
-       provider-name="RayW1986">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource"
-               	library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Videos from teams apart of The FA</summary>
-        <description>Watch videos from clubs and leagues from The Football Association.
 		[B]NOTE:[/B] This plugin requires that you have the YouTube plugin installed also.</description>
     </extension>
 
