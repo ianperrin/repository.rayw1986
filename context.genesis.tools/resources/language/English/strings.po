@@ -1,6 +1,6 @@
 # Kodi Media Center language file
-# Addon Name: Genesis - TV Shows
-# Addon id: context.genesis.tvshows
+# Addon Name: Genesis Tools
+# Addon id: context.genesis.tools
 # Addon Provider: RayW1986
 msgid ""
 msgstr ""
@@ -17,5 +17,5 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#32000"
-msgid "Genesis Settings"
+msgid "Genesis Tools"
 msgstr ""
