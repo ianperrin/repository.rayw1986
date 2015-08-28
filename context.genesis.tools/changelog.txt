@@ -1,4 +1,9 @@
 ========================
+1.1.0
+========================
++ Changed from opening 'Tools' to open 'Settings' instead.
+
+========================
 1.0.0
 ========================
 + Initial release
