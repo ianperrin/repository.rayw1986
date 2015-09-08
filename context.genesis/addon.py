@@ -50,30 +50,15 @@ if __name__ == '__main__':
 			autoplay,
 			clear_cache,
 			clear_sources,
-			update_folders
+			update_folders,
+			trakt_collection,
+			trakt_watchlist,
+			trakt_tv_collection,
+			trakt_tv_watchlist,
+			imdb_watchlist,
+			imdb_tv_watchlist,
+			search
 		)
 		ret = dialog.select('Genesis Library Options', ['Genesis Settings', 'Toggle Autoplay', 'Clear Cache...', 'Clear Sources...', 'Update Folders...', '[B]TRAKT[/B] : Import Collection...', '[B]TRAKT[/B] : Import Watchlist...', '[B]TRAKT[/B] : Import TV Collection...', '[B]TRAKT[/B] : Import TV Watchlist...', '[B]IMDB[/B] : Import Watchlist...', '[B]IMDB[/B] : Import TV Watchlist...', 'Search Genesis'])
-		if ret == 0:
-			settings()
-		if ret == 1:
-			autoplay()
-		if ret == 2:
-			clear_cache()
-		if ret == 3:
-			clear_sources()
-		if ret == 4:
-			update_folders()
-		if ret == 5:
-			trakt_collection()
-		if ret == 6:
-			trakt_watchlist()
-		if ret == 7:
-			trakt_tv_collection()
-		if ret == 8:
-			trakt_tv_watchlist()
-		if ret == 9:
-			imdb_watchlist()
-		if ret == 10:
-			imdb_tv_watchlist()
-		if ret == 11:
-			search()
+		if ret > -1:
+			funcs[ret]()
