@@ -1,4 +1,10 @@
 ========================
+1.1.1
+========================
++ Moved import options to it's own section
++ Added a 'copyright' notice to top of addon.py
+
+========================
 1.1.0
 ========================
 + Code Cosmetics
