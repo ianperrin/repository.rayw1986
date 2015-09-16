@@ -21,6 +21,12 @@
 import xbmc,xbmcaddon,xbmcgui		
 addon = xbmcaddon.Addon('plugin.video.genesis')
 autoit = addon.getSetting('autoplay_library')
+icon = addon.getAddonInfo('icon')
+
+title = "Genesis"
+text_on = "Autoplay Toggled On"
+text_off = "Autoplay Toggled Off"
+time = 5000
 
 def settings():
 		xbmc.executebuiltin('Addon.OpenSettings(plugin.video.genesis)')
@@ -28,8 +34,10 @@ def settings():
 def autoplay():
 		if autoit == 'true':
 			addon.setSetting('autoplay_library','false')
+			xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(title, text_off, time, icon))
 		else:
 			addon.setSetting('autoplay_library','true')
+			xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(title, text_on, time, icon))
 			
 def clear_cache():
 		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=clearCache)')

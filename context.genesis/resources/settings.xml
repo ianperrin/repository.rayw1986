@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <category label="Items to Show">
+      <setting id="show_import" type="bool" label="Import Settings" default="true" />
+   </category>
+</settings>
