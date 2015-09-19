@@ -1,4 +1,9 @@
 ========================
+1.1.3
+========================
++ Added a service for Genesis / Super Favourites (thanks to Spoyser)
+
+========================
 1.1.2
 ========================
 + Added a notification to autoplay toggle
