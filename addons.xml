@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="context.genesis" name="Genesis Context Menu Tools" version="1.1.2" provider-name="RayW1986">
+<addon id="context.genesis" name="Genesis Context Menu Tools" version="1.1.3" provider-name="RayW1986">
   <requires>
     <import addon="xbmc.python" version="2.20.0"/>
   </requires>
@@ -10,6 +10,7 @@
         <visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,tvshow) | StringCompare(ListItem.dbtype,season) | StringCompare(ListItem.dbtype,episode)</visible>
       </item>
     </extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Genesis Library Options</summary>
     <description lang="en">This context menu plugin will allow you to use many Genesis tools while you are in your Kodi library.</description>
