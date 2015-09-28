@@ -16,11 +16,19 @@
 #  http://www.gnu.org/copyleft/gpl.html
 #
 
-def main():
-    import xbmcaddon
-    import xbmcvfs
-    import os
+import xbmcaddon
+import xbmcvfs
+import os
 
+
+def read(filename):
+    f = xbmcvfs.File(filename, 'r')
+    content = f.read()
+    f.close()
+    return content
+
+
+def main():
     sf      = 'plugin.program.super.favourites'
     cm      = 'context.genesis'
 
@@ -33,11 +41,11 @@ def main():
     src     = os.path.join(resource, 'Genesis.py')
     dst     = os.path.join(plugin,   'Genesis.py')
 
-    if xbmcvfs.exists(dst) or (not xbmcvfs.exists(src)):
-        return
-
     try:    xbmcvfs.mkdirs(plugin)
     except: pass
+
+    if read(src) == read(dst):
+        return
 
     xbmcvfs.copy(src, dst)
 
@@ -45,4 +53,4 @@ def main():
 try:    
     main()
 except Exception, e:
-    print str(e)
+    print 'Genesis context menu - error copying SF script %s' % str(e)
