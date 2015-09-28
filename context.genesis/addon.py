@@ -69,6 +69,102 @@ def imdb_tv_watchlist():
 def search():
 		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=searchNavigator)')
 		
+def browse_movies_genres():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movieGenres)')
+		
+def browse_movies_years():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movieYears)')
+		
+def browse_movies_people():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=moviePersons)')
+		
+def browse_movies_cert():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movieCertificates)')
+		
+def browse_movies_featured():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movies&url=featured)')
+		
+def browse_movies_watching():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movies&url=trending)')
+		
+def browse_movies_popular():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movies&url=popular)')
+		
+def browse_movies_voted():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movies&url=views)')
+		
+def browse_movies_boxoffice():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movies&url=boxoffice)')
+		
+def browse_movies_oscars():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movies&url=oscars)')
+		
+def browse_movies_theaters():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movies&url=theaters)')
+		
+def browse_movies_latest():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movies&url=added)')
+		
+def browse_movies_fav():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movieFavourites)')
+	
+def browse_tv_genres():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvGenres)')
+		
+def browse_tv_years():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvYears)')
+		
+def browse_tv_networks():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvNetworks)')
+		
+def browse_tv_watching():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvshows&url=trending)')
+		
+def browse_tv_popular():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvshows&url=popular)')
+		
+def browse_tv_today():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvshows&url=airing)')
+		
+def browse_tv_returning():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvshows&url=active)')
+		
+def browse_tv_new():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvshows&url=premiere)')
+		
+def browse_tv_rated():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvshows&url=rating)')
+		
+def browse_tv_voted():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvshows&url=views)')
+		
+def browse_tv_calendars():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=calendars)')
+		
+def browse_tv_latesteps():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=calendar&url=added)')
+		
+def browse_tv_faveps():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=episodeFavourites)')
+		
+def browse_tv_fav():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvFavourites)')
+		
+def browse_channels():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=channels)')
+		
+def browse_mygen():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=myNavigator)')
+		
+def browse_latestmov():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=movieWidget)')
+		
+def browse_latesteps():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=tvWidget)')
+		
+def browse_calendars():
+		xbmc.executebuiltin('XBMC.RunAddon(plugin.video.genesis,action=calendars)')
+		
 def import_options():
 		dialog = xbmcgui.Dialog()
 		funcs = (
@@ -83,6 +179,64 @@ def import_options():
 		if ret > -1:
 			funcs[ret]()
 			
+def browse():
+		dialog = xbmcgui.Dialog()
+		funcs = (
+			browse_movies,
+			browse_tv,
+			browse_channels,
+			browse_mygen,
+			browse_latestmov,
+			browse_latesteps,
+			browse_calendars,
+		)
+		ret = dialog.select('Browse Genesis', ['Movies', 'TV Shows', 'Channels', 'My Genesis', 'Latest Movies', 'Latest Episodes', 'TV Calendar'])
+		if ret > -1:
+			funcs[ret]()
+			
+def browse_movies():
+		dialog = xbmcgui.Dialog()
+		funcs = (
+			browse_movies_genres,
+			browse_movies_years,
+			browse_movies_people,
+			browse_movies_cert,
+			browse_movies_featured,
+			browse_movies_watching,
+			browse_movies_popular,
+			browse_movies_voted,
+			browse_movies_boxoffice,
+			browse_movies_oscars,
+			browse_movies_theaters,
+			browse_movies_latest,
+			browse_movies_fav,
+		)
+		ret = dialog.select('Browse Genesis', ['Genres', 'Years', 'People', 'Certificates', 'Featured', 'People Watching', 'Most Popular', 'Most Voted', 'Box Office', 'Oscar Winners', 'In Theaters', 'Latest Movies', 'Favourites'])
+		if ret > -1:
+			funcs[ret]()
+	
+def browse_tv():
+		dialog = xbmcgui.Dialog()
+		funcs = (
+			browse_tv_genres,
+			browse_tv_years,
+			browse_tv_networks,
+			browse_tv_watching,
+			browse_tv_popular,
+			browse_tv_today,
+			browse_tv_returning,
+			browse_tv_new,
+			browse_tv_rated,
+			browse_tv_voted,
+			browse_tv_calendars,
+			browse_tv_latesteps,
+			browse_tv_faveps,
+			browse_tv_fav,
+		)
+		ret = dialog.select('Browse Genesis', ['Genres', 'Years', 'Networks', 'People Watching', 'Most Popular', 'Airing Today', 'Returning TV Shows', 'New TV Shows', 'Highly Rated', 'Most Voted', 'TV Calendar', 'Latest Episodes', 'Favourite Episodes', 'Favourites'])
+		if ret > -1:
+			funcs[ret]()
+			
 if __name__ == '__main__':
 		dialog = xbmcgui.Dialog()
 		funcs = (
@@ -92,8 +246,9 @@ if __name__ == '__main__':
 			clear_sources,
 			update_folders,
 			search,
+			browse,
 			import_options
 		)
-		ret = dialog.select('Genesis Library Options', ['Genesis Settings', 'Toggle Autoplay', 'Clear Cache', 'Clear Sources', 'Update Folders', 'Search Genesis', 'Library Import Options...'])
+		ret = dialog.select('Genesis Library Options', ['Genesis Settings', 'Toggle Autoplay', 'Clear Cache', 'Clear Sources', 'Update Folders', 'Search Genesis', 'Browse Genesis', 'Library Import Options...'])
 		if ret > -1:
 			funcs[ret]()

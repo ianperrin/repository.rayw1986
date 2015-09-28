@@ -1,4 +1,9 @@
 ========================
+1.2.0
+========================
++ Added the ability to browse through Genesis while in context menu
+
+========================
 1.1.4
 ========================
 + Changed to take into account changes in Genesis
