@@ -1,6 +1,7 @@
-# plugin.video.kordkutters
-A kodi plugin dedicated to kordkutters podcast.
+Paramount Vault
+===============
 
-![](http://s16.postimg.org/6dews44lx/image.png)
+Watch movies from the Paramount Vault, including classics like Masters of the Universe, Hamlet, Missing In Action and There Goes The Neighbourhood.
 
-Ned and Nate are two members of Team Kodi. Ned is primarily responsible for the Kodi Wiki. Nate is the Foundation president and does various jobs related to project and community management for the group. They decided to put together the KordKutters project because, frankly, they didn’t have much to do one week, and it seemed like it could be fun. They’ve been showing off Kodi for years at conventions and expos, so why not start doing videos with the exact same idea in mind?
+**PLEASE NOTE:** 
+The content in this addon is geoblocked for viewership in only the United States. The YouTube plugin for Kodi is required to be installed to use this plugin.
