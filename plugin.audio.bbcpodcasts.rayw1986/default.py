@@ -25,8 +25,8 @@ ADDON = settings.addon()
 WATCHED_FILE = settings.watched_videos_file()
 FAVOURITES_FILE = settings.favourite_podcasts()
 
-art = xbmc.translatePath(os.path.join('special://home/addons/plugin.audio.bbcpodcasts/resources/art', ''))
-fanart = xbmc.translatePath(os.path.join('special://home/addons/plugin.audio.bbcpodcasts', 'fanart.jpg'))
+art = xbmc.translatePath(os.path.join('special://home/addons/plugin.audio.bbcpodcasts.rayw1986/resources/art', ''))
+fanart = xbmc.translatePath(os.path.join('special://home/addons/plugin.audio.bbcpodcasts.rayw1986', 'fanart.jpg'))
 
 def CATEGORIES():
 		addDirMain('Categories','url',3,art+'cats.png')

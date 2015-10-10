@@ -1,8 +1,8 @@
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin
 import os
 
-ADDON = xbmcaddon.Addon(id='plugin.audio.bbcpodcasts')
-DATA_PATH = os.path.join(xbmc.translatePath('special://profile/addon_data/plugin.audio.bbcpodcasts'), '')
+ADDON = xbmcaddon.Addon(id='plugin.audio.bbcpodcasts.rayw1986')
+DATA_PATH = os.path.join(xbmc.translatePath('special://profile/addon_data/plugin.audio.bbcpodcasts.rayw1986'), '')
 def addon():
     return ADDON
 
