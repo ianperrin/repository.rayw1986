@@ -37,9 +37,28 @@
 
 </addon>
 
+<addon id="plugin.audio.podcastone.rayw1986" name="Podcast One" version="1.0.0" provider-name="RayW1986">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               	library="default.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Listen to the shows from Podcast One</summary>
+        <description lang="en">Browse and listen to the many podcasts available at Podcast One.
+
+[B]NOTE:[/B] This add-on does NOT support Premium accounts, currently.</description>
+		<disclaimer lang="en">The author is not affiliated with Podcast One</disclaimer>
+    </extension>
+
+</addon>
+
 <addon id="plugin.video.all_wrestling"
        name="All Wrestling"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="RayW1986">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -53,6 +72,27 @@
         <platform>all</platform>
         <summary>Wrestling from allwrestling.net</summary>
         <description>For help or more information please visit TVADDONS.ag</description>
+		<disclaimer lang="en">The author is not responsible for the media you find in this add-on.</disclaimer>
+    </extension>
+
+</addon>
+
+<addon id="plugin.video.gmdb"
+       name="Game Movie Database"
+       version="1.0.1"
+       provider-name="RayW1986">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.urlresolver"  version="2.1.2"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               	library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Cutscene movies from gmdb.tv</summary>
+        <description>Watch cutscene movies from video games from the Game Movie Database.</description>
 		<disclaimer lang="en">The author is not responsible for the media you find in this add-on.</disclaimer>
     </extension>
 
@@ -80,7 +120,7 @@
 
 <addon id="plugin.video.moviesaboutmusic"
        name="MoviesAboutMusic.com"
-       version="1.0.0"
+       version="1.1.1"
        provider-name="RayW1986">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>

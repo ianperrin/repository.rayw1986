@@ -1,5 +1,5 @@
 '''
-    MoviesAboutMusic.com Add-on
+    Game Movie Database Add-on
     Copyright (C) 2016 RayW1986
 
     This program is free software: you can redistribute it and/or modify
@@ -21,26 +21,84 @@ import plugintools
 import xbmcaddon
 import urlresolver
 
-ADDON = xbmcaddon.Addon(id='plugin.video.moviesaboutmusic')
-DATA_PATH = os.path.join(xbmc.translatePath('special://profile/addon_data/plugin.video.moviesaboutmusic'), '')
+ADDON = xbmcaddon.Addon(id='plugin.video.gmdb')
+DATA_PATH = os.path.join(xbmc.translatePath('special://profile/addon_data/plugin.video.gmdb'), '')
 
-fanart = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.moviesaboutmusic', 'fanart.jpg'))
-art = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.moviesaboutmusic/resources/art', ''))
-main_url = 'http://moviesaboutmusic.com/?cat='
-
-addon_id = xbmcaddon.Addon().getAddonInfo('id')
-selfAddon = xbmcaddon.Addon(id=addon_id)
-enable_auto_view = selfAddon.getSetting('enable_auto_view')
-view_mode_id = selfAddon.getSetting('view_mode_id')
+fanart = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.gmdb', 'fanart.jpg'))
+art = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.gmdb/resources/art', ''))
+baseurl = 'http://www.gmdb.tv/'
+genreurl = 'http://www.gmdb.tv/search/label/'
 
 def CATEGORIES():
-        addDirMain('Documentaries',main_url+'69',1,art+'docs.png')
-        addDirMain('Feature Films',main_url+'133',1,art+'films.png')
-        addDirMain('Genres','http://moviesaboutmusic.com/',3,art+'genres.png')
-        addDirMain('Decades','http://moviesaboutmusic.com/',4,art+'decades.png')
-        addDirMain('Recently Added','http://moviesaboutmusic.com/blog/',1,art+'recent.png')
+        addDirMain('Featured',baseurl,1,art+'featured.png')
+        addDirMain('Film Genre','url',5,art+'film.png')
+        addDirMain('Game Genre','url',6,art+'game.png')
+        addDirMain('A-Z','url',7,art+'az.png')
+        addDirMain('Search','url',4,art+'search.png')
 		
-def	getVideos(url):
+def getFilm():
+        addDirMain('Action',genreurl+'Action%20%28Film%29',1,art+'action.png')
+        addDirMain('Adventure',genreurl+'Adventure%20%28Film%29',1,art+'adventure.png')
+        addDirMain('Animation',genreurl+'Animation',1,art+'animation.png')
+        addDirMain('Comedy',genreurl+'Comedy',1,art+'comedy.png')
+        addDirMain('Crime',genreurl+'Crime',1,art+'crime.png')
+        addDirMain('Drama',genreurl+'Drama',1,art+'drama.png')
+        addDirMain('Family & Kids',genreurl+'Family%20%2F%20Kids',1,art+'family.png')
+        addDirMain('Fantasy',genreurl+'Fantasy',1,art+'fantasy.png')
+        addDirMain('Horror','Horror',1,art+'horror.png')
+        addDirMain('Mystery','Mystery',1,art+'mystery.png')
+        addDirMain('Romance','Romance',1,art+'romance.png')
+        addDirMain('Sci-Fi','Sci-Fi',1,art+'scifi.png')
+        addDirMain('Sports',genreurl+'Sports%20%28Film%29',1,art+'sports.png')
+        addDirMain('Thriller','Thriller',1,art+'thriller.png')
+        addDirMain('War','War',1,art+'war.png')
+        addDirMain('Western','Western',1,art+'western.png')
+		
+def getGame():
+        addDirMain('Action',genreurl+'Action%20%28Game%29',1,art+'action.png')
+        addDirMain('Action Adventure',genreurl+'Action%20Adventure',1,art+'actionadventure.png')
+        addDirMain('Action RPG',genreurl+'Action%20RPG',1,art+'actionrpg.png')
+        addDirMain('Adventure',genreurl+'Adventure%20%28Game%29',1,art+'adventure.png')
+        addDirMain('Fighting','Fighting',1,art+'fighting.png')
+        addDirMain('Platformer','Platformer',1,art+'platformer.png')
+        addDirMain('Puzzle','Puzzle',1,art+'puzzle.png')
+        addDirMain('Racing','Racing',1,art+'racing.png')
+        addDirMain('RPG','RPG',1,art+'rpg.png')
+        addDirMain('Shooter','Shooter',1,art+'shooter.png')
+        addDirMain('Sports',genreurl+'Sports%20%28Game%29',1,art+'sports.png')
+        addDirMain('Strategy',genreurl+'Strategy',1,art+'stratgey.png')
+        addDirMain('Survival Horror',genreurl+'Survival%20Horror',1,art+'survivalhorror.png')
+        addDirMain('Visual Novel',genreurl+'Visual%20Novel',1,art+'visualnovel.png')
+		
+def getAZ():
+        addDirMain('A',genreurl+'A',1,art+'a.png')
+        addDirMain('B',genreurl+'B',1,art+'b.png')
+        addDirMain('C',genreurl+'C',1,art+'c.png')
+        addDirMain('D',genreurl+'D',1,art+'d.png')
+        addDirMain('E',genreurl+'E',1,art+'e.png')
+        addDirMain('F',genreurl+'F',1,art+'f.png')
+        addDirMain('G',genreurl+'G',1,art+'g.png')
+        addDirMain('H',genreurl+'H',1,art+'h.png')
+        addDirMain('I',genreurl+'I',1,art+'i.png')
+        addDirMain('J',genreurl+'J',1,art+'j.png')
+        addDirMain('K',genreurl+'K',1,art+'k.png')
+        addDirMain('L',genreurl+'L',1,art+'l.png')
+        addDirMain('M',genreurl+'M',1,art+'m.png')
+        addDirMain('N',genreurl+'N',1,art+'n.png')
+        addDirMain('O',genreurl+'O',1,art+'o.png')
+        addDirMain('P',genreurl+'P',1,art+'p.png')
+        addDirMain('Q',genreurl+'Q',1,art+'q.png')
+        addDirMain('R',genreurl+'R',1,art+'r.png')
+        addDirMain('S',genreurl+'S',1,art+'s.png')
+        addDirMain('T',genreurl+'T',1,art+'t.png')
+        addDirMain('U',genreurl+'U',1,art+'u.png')
+        addDirMain('V',genreurl+'V',1,art+'v.png')
+        addDirMain('W',genreurl+'W',1,art+'w.png')
+        addDirMain('X',genreurl+'X',1,art+'x.png')
+        addDirMain('Y',genreurl+'Y',1,art+'y.png')
+        addDirMain('Z',genreurl+'Z',1,art+'z.png')
+		
+def	getMovies(url):
     find_url=url.find('?')
     keep_url=url[:find_url]
     
@@ -52,35 +110,26 @@ def	getVideos(url):
     response.close()
 
     pattern = ""
-    matches = plugintools.find_multiple_matches(link,'<div id="post(.*?)<i class=".+?">')
-    nextpage = plugintools.find_multiple_matches(link,'"nextLink":"(.*?),')
+    matches = plugintools.find_multiple_matches(link,"<h3 class='post-title entry-title'>(.*?)--</div>")
+    nextpage = plugintools.find_multiple_matches(link,"<a class='blog-pager-older-link'(.*?)title='Older Posts'>")
     
     for entry in matches:
        
-        title = plugintools.find_single_match(entry,'href=".+?" rel=".+?" title="(.+?)">').replace('&#8211;','-').replace("&#8217;","'").replace("&#8216;","'")
-        ytID = plugintools.find_single_match(entry,'src="https://www.youtube.com/embed/(.+?)\?feature=')
-        thumbnail = 'http://i.ytimg.com/vi/'+ytID+'/hqdefault.jpg'
-        url = 'plugin://plugin.video.youtube/play/?video_id='+ytID
-        fanart = 'http://i.ytimg.com/vi/'+ytID+'/hqdefault.jpg'
-        plot = plugintools.find_single_match(entry,'<p>(.+?)</p>').replace('&#8211;','-').replace("&#8217;","'").replace("&#8216;","'").replace('&#8220;','"').replace('&#8221;','"')
+        name = plugintools.find_single_match(entry,".html'>(.+?)</a")
+        iconimage = plugintools.find_single_match(entry,'src="(.+?)" style=')
+        url = plugintools.find_single_match(entry,"<a href='(.+?)'>")
 
-        plugintools.add_item( action="play" , title=title , url=url , fanart=fanart , plot=plot , thumbnail=thumbnail , folder=True )
+        addDirMain(name,url,3,iconimage)
 		
     for entry in nextpage:
        
         name = 'Next Page'
         iconimage = art+'nextpage.png'
-        geturl = plugintools.find_single_match(entry,'http(.+?)"').replace('\/','/')
-        url = 'http'+geturl
+        url = plugintools.find_single_match(entry,"href='(.+?)'")
 
         addDirMain(name,url,1,iconimage)
 		
-    if enable_auto_view=='true':
-        xbmc.executebuiltin('Container.SetViewMode(%d)' % int(view_mode_id))
-    else:
-        pass
-
-def	getGenres(url):
+def	getStreams(url):
     find_url=url.find('?')
     keep_url=url[:find_url]
     
@@ -92,37 +141,41 @@ def	getGenres(url):
     response.close()
 
     pattern = ""
-    matches = plugintools.find_multiple_matches(link,'<li id="nav-menu-item-17(.*?)</li>')
+    h2 = plugintools.find_multiple_matches(link,"<h2>\n(.+?)</iframe>")
+    h3 = plugintools.find_multiple_matches(link,"<h3>\n(.*?)</iframe>")
     
-    for entry in matches:
+    for entry in h2:
        
-        name = plugintools.find_single_match(entry,'sub-menu-link">(.+?)</a>')
-        iconimage = art+'genres.png'
-        url = plugintools.find_single_match(entry,'href="(.+?)"')
+        name = plugintools.find_single_match(entry,".html'>(.+?)</a")
+        title = plugintools.find_single_match(entry,"(.+?)</h2>").replace('\n','')
+        ytID = plugintools.find_single_match(entry,'src="https://www.youtube.com/embed(.+?)rel=').replace('/','video_id=').replace('?','')
+        ytID2 = plugintools.find_single_match(entry,'src="https://www.youtube.com/embed/(.+?)rel=').replace('?','')
+        ytID3 = plugintools.find_single_match(entry,'src="https://www.youtube.com/embed/(.+?)list=').replace('?','')
+        plID = plugintools.find_single_match(entry,'src="https://www.youtube.com/embed/.+?is(.+?)width').replace('t=','playlist_id=').replace('" ','&order=default')
+        url = 'plugin://plugin.video.youtube/play/?'+ytID+plID
+        thumbnail = 'http://i.ytimg.com/vi/'+ytID2+ytID3+'/hqdefault.jpg'
 
-        addDirMain(name,url,1,iconimage)
-        
-def getDecades(url):
-    find_url=url.find('?')
-    keep_url=url[:find_url]
-    
-    iconimage=""
-    req = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    response = urllib2.urlopen(req)
-    link=response.read()
-    response.close()
-
-    pattern = ""
-    matches = plugintools.find_multiple_matches(link,'<li id="nav-menu-item-14(.*?)</li>')
-    
-    for entry in matches:
+        plugintools.add_item( action="play" , title=title , url=url , fanart=fanart , thumbnail=thumbnail , folder=True )
+		
+    for entry in h3:
        
-        name = plugintools.find_single_match(entry,'sub-menu-link">(.+?)</a>')
-        iconimage = art+'genres.png'
-        url = plugintools.find_single_match(entry,'href="(.+?)"')
+        title = plugintools.find_single_match(entry,"(.+?)</h3>").replace('\n','').replace('</h3><h3>','')
+        ytID = plugintools.find_single_match(entry,'src="https://www.youtube.com/embed(.+?)rel=').replace('/','video_id=').replace('?','')
+        ytID2 = plugintools.find_single_match(entry,'src="https://www.youtube.com/embed/(.+?)rel=').replace('?','')
+        ytID3 = plugintools.find_single_match(entry,'src="https://www.youtube.com/embed/(.+?)list=').replace('?','')
+        plID = plugintools.find_single_match(entry,'src="https://www.youtube.com/embed/.+?is(.+?)width').replace('t=','playlist_id=').replace('" ','&order=default')
+        url = 'plugin://plugin.video.youtube/play/?'+ytID+plID
+        thumbnail = 'http://i.ytimg.com/vi/'+ytID2+ytID3+'/hqdefault.jpg'
 
-        addDirMain(name,url,1,iconimage)
+        plugintools.add_item( action="play" , title=title , url=url , fanart=fanart , thumbnail=thumbnail , folder=True )
+		
+def search():
+        keyb = xbmc.Keyboard('', 'Search')
+        keyb.doModal()
+        if (keyb.isConfirmed()):
+                search = keyb.getText().replace(' ','+')
+                url = baseurl+'search/?q='+search
+                getMovies(url)
 		
 def play(name,url):
         if urlresolver.HostedMediaFile(url).valid_url():
@@ -252,15 +305,25 @@ if mode==None or url==None or len(url)<1:
 	
 elif mode==1:
         print ""+url
-        getVideos(url)
+        getMovies(url)
         
 elif mode==2:
         play(name,url)
 		
 elif mode==3:
-        getGenres(url)
+        print ""+url
+        getStreams(url)
 		
 elif mode==4:
-        getDecades(url)
-
+        search()
+		
+elif mode==5:
+        getFilm()
+		
+elif mode==6:
+        getGame()
+		
+elif mode==7:
+        getAZ()
+		
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

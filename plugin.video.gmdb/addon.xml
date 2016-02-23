@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.moviesaboutmusic"
-       name="MoviesAboutMusic.com"
-       version="1.1.1"
+<addon id="plugin.video.gmdb"
+       name="Game Movie Database"
+       version="1.0.1"
        provider-name="RayW1986">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -13,10 +13,8 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary>Watch videos from MoviesAboutMusic.com</summary>
-        <description>Watch documentaries and feature length movies from the MoviesAboutMusic.com website.
-		
-		For help or more information please visit TVADDONS.ag</description>
+        <summary>Cutscene movies from gmdb.tv</summary>
+        <description>Watch cutscene movies from video games from the Game Movie Database.</description>
 		<disclaimer lang="en">The author is not responsible for the media you find in this add-on.</disclaimer>
     </extension>
 	
