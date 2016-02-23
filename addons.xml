@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="context.genesis" name="Genesis Context Menu Tools" version="1.2.0" provider-name="RayW1986">
-  <requires>
-    <import addon="xbmc.python" version="2.20.0"/>
-  </requires>
-    <extension point="kodi.context.item" library="addon.py">
-      <item>
-        <label>32000</label>
-        <visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,tvshow) | StringCompare(ListItem.dbtype,season) | StringCompare(ListItem.dbtype,episode)</visible>
-      </item>
-    </extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Genesis Library Options</summary>
-    <description lang="en">This context menu plugin will allow you to use many Genesis tools while you are in your Kodi library.</description>
-    <platform>all</platform>
-    <forum></forum>
-    <source></source>
-  </extension>
-</addon>
-
 <addon id="plugin.audio.bbcpodcasts.rayw1986" name="BBC Podcasts" version="0.0.1" provider-name="RayW1986">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -56,30 +36,9 @@
 
 </addon>
 
-<addon id="plugin.video.all_wrestling"
-       name="All Wrestling"
-       version="1.0.1"
-       provider-name="RayW1986">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.urlresolver"  version="2.1.2"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource"
-               	library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Wrestling from allwrestling.net</summary>
-        <description>For help or more information please visit TVADDONS.ag</description>
-		<disclaimer lang="en">The author is not responsible for the media you find in this add-on.</disclaimer>
-    </extension>
-
-</addon>
-
 <addon id="plugin.video.gmdb"
        name="Game Movie Database"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="RayW1986">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
