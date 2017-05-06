@@ -1,48 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.audio.bbcpodcasts.rayw1986" name="BBC Podcasts" version="0.0.1" provider-name="RayW1986">
+<addon id="plugin.video.freeview" name="Freeview" version="3.0.0" provider-name="RayW1986">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource"
-               	library="default.py">
-        <provides>audio</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en">Listen to the BBC Podcasts</summary>
-        <description lang="en">Browse and listen to the many BBC Podcasts.</description>
-		<disclaimer lang="en">The author is not affiliated either with the BBC</disclaimer>
-    </extension>
-
-</addon>
-
-<addon id="plugin.audio.podcastone.rayw1986" name="Podcast One" version="1.0.0" provider-name="RayW1986">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource"
-               	library="default.py">
-        <provides>audio</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang="en">Listen to the shows from Podcast One</summary>
-        <description lang="en">Browse and listen to the many podcasts available at Podcast One.
-
-[B]NOTE:[/B] This add-on does NOT support Premium accounts, currently.</description>
-		<disclaimer lang="en">The author is not affiliated with Podcast One</disclaimer>
-    </extension>
-
-</addon>
-
-<addon id="plugin.video.gmdb"
-       name="Game Movie Database"
-       version="1.0.2"
-       provider-name="RayW1986">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.urlresolver"  version="2.1.2"/>
     </requires>
     <extension point="xbmc.python.pluginsource"
                	library="default.py">
@@ -50,89 +10,9 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary>Cutscene movies from gmdb.tv</summary>
-        <description>Watch cutscene movies from video games from the Game Movie Database.</description>
+        <summary>UK Freeview Channels</summary>
+        <description>Watch a wide array of Freeview channels from official and legal sources. [B]THIS ADD-ON REQUIRES A VPN OUTSIDE OF THE UNITED KINGDOM.[/B]</description>
 		<disclaimer lang="en">The author is not responsible for the media you find in this add-on.</disclaimer>
-    </extension>
-
-</addon>
-
-<addon id="plugin.video.iwn"
-       name="Indy Wrestling Network"
-       version="1.0.3"
-       provider-name="RayW1986">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource"
-               	library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Collection of Independent Wrestling Promotions</summary>
-        <description>The Indy Wrestling Network is your number one stop shop for independent wrestling promotions across the world.
-		[B]NOTE:[/B] This plugin requires that you have the YouTube plugin installed also.</description>
-    </extension>
-
-</addon>
-
-<addon id="plugin.video.moviesaboutmusic"
-       name="MoviesAboutMusic.com"
-       version="1.1.1"
-       provider-name="RayW1986">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.urlresolver"  version="2.1.2"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource"
-               	library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>Watch videos from MoviesAboutMusic.com</summary>
-        <description>Watch documentaries and feature length movies from the MoviesAboutMusic.com website.
-
-		For help or more information please visit TVADDONS.ag</description>
-		<disclaimer lang="en">The author is not responsible for the media you find in this add-on.</disclaimer>
-    </extension>
-
-</addon>
-
-<addon id="plugin.video.paramount_vault" name="Paramount Vault" version="1.0.0" provider-name="RayW1986">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <language>en</language>
-    <summary lang="en">Watch movies from the Paramount Vault</summary>
-    <description lang="en">Watch movies from the Paramount Vault, including classics like Masters of the Universe, Hamlet, Missing In Action and There Goes The Neighbourhood.
-
-	[B]Note:[/B] The content in this addon is geoblocked for viewership in only the United States. The YouTube plugin for Kodi is required to be installed to use this plugin.</description>
-    <disclaimer lang="en">The author is not affiliated either with Paramount Pictures or Viacom</disclaimer>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.potterstouch"
-       name="The Potter's Touch"
-       version="1.0.0"
-       provider-name="RayW1986">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource"
-               	library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary>The Potter's Touch By Bishop T.D. Jakes</summary>
-        <description>The Potter's Touch, a weekly program, with Bishop T.D. Jakes, tackles today's topics and confronts the hidden issues and invisible scars that go untreated. This broadcast carries healing and restoration into homes of hurting people, unearthing taboo topics and offering practical and spiritual solutions to life's toughest questions.</description>
     </extension>
 
 </addon>
