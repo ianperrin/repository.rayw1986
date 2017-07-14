@@ -16,11 +16,11 @@ def	vod_uktv(url):
         name       = plugintools.find_single_match(entry,'alt="(.+?)"')
         url        = plugintools.find_single_match(entry,'<a href="(.+?)"').replace('/shows/','http://uktvplay.uktv.co.uk/shows/')
         iconimage2 = plugintools.find_single_match(entry,'<img data-url="https://res.cloudinary.com/uktv/image/upload/t_XX/(.+?)"').encode("utf-8")
-        iconimage  = 'https://res.cloudinary.com/uktv/image/upload/b_rgb:000000,w_235,c_fill,q_90,h_132/'+iconimage2
+        iconimage  = 'https://res.cloudinary.com/uktv/image/upload/b_rgb:000000,w_1863,c_fill,q_90,h_1047/'+iconimage2
 		
         addDir(name,url,11,iconimage)
         xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORT_METHOD_LABEL)
-        xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
+        xbmcplugin.setContent(int(sys.argv[1]), 'tvshows')
 		
 def	vod_uktvEp(url):
     link  = open_url(url)

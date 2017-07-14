@@ -9,6 +9,7 @@ from resources.lib.vod.blaze import *
 from resources.lib.vod.quest import *
 from resources.lib.vod.tvplayer import *
 from resources.lib.vod.trutv import *
+from resources.lib.vod.itv import *
 from resources.lib.vod.uktv_play import *
 
 net       = net.Net()
@@ -26,6 +27,7 @@ def CATEGORIES():
 	addDir('Catch Up TV','url',6,logos+'menu_vod.png')
 	
 def getVOD():
+	#addDir('BBC iPlayer','url',16,logos_tvp+'308.png')
 	addDir('Blaze','url',8,logos+'blaze.png')
 	addDir('Dave','http://uktvplay.uktv.co.uk/shows/channel/dave/',10,logos_tvp+'300.png')
 	addDir('Drama','http://uktvplay.uktv.co.uk/shows/channel/drama/',10,logos_tvp+'346.png')
@@ -87,5 +89,10 @@ elif mode==8: vod_blaze()
 elif mode==9: vod_quest()
 elif mode==10: vod_uktv(url)
 elif mode==11: vod_uktvEp(url)
+elif mode==12: ukiptv(url)
+elif mode==13: tvcatchup(url)
+elif mode==14: vod_blazeseason(url)
+elif mode==15: vod_itv_shows()
+elif mode==16: vod_itv_episodes(url)
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

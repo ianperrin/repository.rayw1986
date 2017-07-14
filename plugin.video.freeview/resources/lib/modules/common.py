@@ -64,7 +64,7 @@ def addLink(name,url,mode,iconimage):
         u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
         ok=True
         liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
-        liz.setProperty('fanart_image', fanart)
+        liz.setProperty('fanart_image', iconimage)
         liz.setProperty("IsPlayable","true")
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
         return ok
@@ -81,7 +81,7 @@ def addDir(name,url,mode,iconimage):
         u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
         ok=True
         liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
-        liz.setProperty('fanart_image', fanart)
+        liz.setProperty('fanart_image', iconimage)
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
         return ok
 		
@@ -118,5 +118,41 @@ def	vod_play(url):
     for entry in matches:
        
         url = plugintools.find_single_match(entry,'"hls":"(.+?)",').replace('\/','/')
+
+        play(url)
+		
+def	ukiptv(url):
+    url       = 'http://uktv.robssatellitetv.com/watch-uk-tv-online/'+url
+    iconimage = ""
+    req       = urllib2.Request(url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    response  = urllib2.urlopen(req)
+    link      = response.read()
+    response.close()
+
+    pattern = ""
+    matches = plugintools.find_multiple_matches(link,'player = flowplayer(.*?)</script>')
+    
+    for entry in matches:
+       
+        url = plugintools.find_single_match(entry,'src: "(.+?)"')
+
+        play(url)
+		
+def	tvcatchup(url):
+    url       = 'https://tvcatchup.com/watch/'+url
+    iconimage = ""
+    req       = urllib2.Request(url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    response  = urllib2.urlopen(req)
+    link      = response.read()
+    response.close()
+
+    pattern = ""
+    matches = plugintools.find_multiple_matches(link,"jwplayer(.*?)</script>")
+    
+    for entry in matches:
+       
+        url = plugintools.find_single_match(entry,"file: '(.+?)'")
 
         play(url)

@@ -60,22 +60,22 @@ def tvplayer(url):
     print 'url',url
     import re,urllib,json
     islogin,cj=performTVPLogin()
+    headers   = {'Referer':'https://tvplayer.com/watch/','Origin':'https://tvplayer.com','User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'}
     
-    watchHtml = open_url("http://tvplayer.com/watch/",cj=cj)
+    watchHtml = open_url("https://tvplayer.com/watch/bbctwo",cj=cj,headers=headers)
     channelid=url#re.findall('data-resource="(.*?)"' ,watchHtml)[0]
     #token=re.findall('var validate = "(.*?)"' ,watchHtml)[0]
     token='null'
     try:
         token=re.findall('data-token="(.*?)"' ,watchHtml)[0]
     except: pass
-    headers   = {'Referer':'http://tvplayer.com/watch/','Origin':'http://tvplayer.com','User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'}
     
-    contextjs=open_url("https://tvplayer.com/watch/context?resource=%s&nonce=%s"%(channelid,token),headers=headers,cj=cj);  
+    contextjs=open_url("https://tvplayer.com/watch/context?resource=%s&gen=%s"%(channelid,token),headers=headers,cj=cj);  
     contextjs=json.loads(contextjs)
     validate=contextjs["validate"]
     #cj        = CookieJar()
     data = urllib.urlencode({'service':'1','platform':'chrome','validate':validate ,'id' : channelid})
-    retjson   = open_url("http://api.tvplayer.com/api/v2/stream/live",data=data, headers=headers,cj=cj);
+    retjson   = open_url("https://api.tvplayer.com/api/v2/stream/live",data=data, headers=headers,cj=cj);
     jsondata  = json.loads(retjson)
     #    print cj
     #cj        = CookieJar()

@@ -1,4 +1,21 @@
 ========================
+3.1.1
+========================
++ Fixed TVPlayer
+
+========================
+3.1.0
+========================
++ Fixes to TVPlayer
++ Removed FilmOn streams
++ Added CatchupTV streams
+
+========================
+3.0.0
+========================
++ Complete re-write
+
+========================
 2.1.0
 ========================
 + Added TVPlayer login [Credit: shani_08]

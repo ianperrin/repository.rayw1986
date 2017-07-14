@@ -20,4 +20,4 @@ def	vod_quest():
 		
         addLink(name,url,1,iconimage)
         xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORT_METHOD_LABEL)
-        xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
+        xbmcplugin.setContent(int(sys.argv[1]), 'tvshows')
